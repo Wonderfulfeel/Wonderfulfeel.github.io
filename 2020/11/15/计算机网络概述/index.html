@@ -6,15 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2020 | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="第一章： 消息：通信传递消息 计算机网络：带芯片+能够传输数据。 三网融合：电信网络，有线电视网络，计算机网络 计算机网络：由若干个结点和连接结点的链路组成，简称网络。 互连网internet,网络的网络，网络之间通过路由器连接起来，通信协议可以任意选择 因特网&#x3D;互联网Internet,全球最大的，开放的，由众多网络相互连接而成的特定互连网，采用TCP&#x2F;IP协议族作为通信的规则，其前身是ARPAN">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2020/index.html">
+<meta property="og:url" content="http://example.com/2020/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="第一章： 消息：通信传递消息 计算机网络：带芯片+能够传输数据。 三网融合：电信网络，有线电视网络，计算机网络 计算机网络：由若干个结点和连接结点的链路组成，简称网络。 互连网internet,网络的网络，网络之间通过路由器连接起来，通信协议可以任意选择 因特网&#x3D;互联网Internet,全球最大的，开放的，由众多网络相互连接而成的特定互连网，采用TCP&#x2F;IP协议族作为通信的规则，其前身是ARPAN">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="e:/计算机网络/5.png">
+<meta property="og:image" content="e:/计算机网络/3.png">
+<meta property="og:image" content="e:/计算机网络/6.png">
+<meta property="og:image" content="e:/计算机网络/7.png">
+<meta property="og:image" content="e:/计算机网络/8.png">
+<meta property="og:image" content="e:/计算机网络/4.png">
+<meta property="article:published_time" content="2020-11-15T09:02:43.113Z">
+<meta property="article:modified_time" content="2020-11-15T07:18:10.000Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="e:/计算机网络/5.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,208 +161,240 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-计算机网络概述" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第一章：</p>
+<p><strong>消息</strong>：通信传递消息</p>
+<p><strong>计算机网络</strong>：带芯片+能够传输数据。</p>
+<p><strong>三网融合</strong>：电信网络，有线电视网络，计算机网络</p>
+<p><strong>计算机网络</strong>：由若干个结点和连接结点的链路组成，简称网络。</p>
+<p>互连网internet,网络的网络，网络之间通过路由器连接起来，通信协议可以任意选择</p>
+<p>因特网=互联网Internet,全球最大的，开放的，由众多网络相互连接而成的特定互连网，采用TCP/IP协议族作为通信的规则，其前身是ARPANET</p>
+<p>![1](C:\Users\一琦\Pictures\Saved Pictures\1.png)</p>
+<p><strong>互联网发展三阶段</strong>：</p>
+<ol>
+<li>1969美国国防部创建第一个分组交换网络ARPANET</li>
+<li>1985三级结构的互联网，主干网，地区网，校园网（或企业网）</li>
+<li>1993多层次ISP结构互联网；ISP（Internet     Service Provider）互联网服务提供者，一般是进行商业活动的公司（中国电信，中国移动，中国联通）</li>
+</ol>
+<ul>
+<li><p><strong>工作原理</strong>：只要每个本地ISP都安装了路由器连接到每个地区的ISP，而每个地区的ISP也有路由器连接到主干的ISP，就可以在这些相互连接的ISP下完成互联网中所有的分组转发任务。———&gt;想要更快的完成分组转发，不需要每次都经过主干ISP，提高网络资源的利用率——–&gt;互联网交换结点IXP（Internet     Exchange Point）允许两个网络直接连接并交换分组，而不需要通过第三个网络来转发分组。</p>
+<p>![2](C:\Users\一琦\Pictures\Saved Pictures\2.png)</p>
+</li>
+<li><p><strong>万维网</strong>WWW（World Wide Web）是互联网的一个应用，是由许多相互连接的超文本组成的系统</p>
+</li>
+</ul>
+<p>互联网标准化：RFC（Request For Comments）请求评论，所有的互联网标准都是以RFC的形式在互联网发表</p>
+<p>互联网组成：（图）边缘部分，核心部分</p>
+<ul>
+<li><p><strong>边缘部分</strong>：由所有连接在互联网的主机组成，用来通信，资源共享。通信（主机A的某个进程与主机B的某个进程进行通信）</p>
+</li>
+<li><p><strong>计算机之间的通信</strong>：B/S（Browser/Server），可直接向服务器发出请求；CS（Client/Server）需要下载软件app到本地，</p>
+<p><img src="E:\计算机网络\5.png" alt="5"></p>
+</li>
+</ul>
+<p><strong>P2P</strong>（peer to peer）对等连接，两台主机在通信时并不区分哪一个是服务的请求方，哪一个是数据的接收方，两台主机可以既是客户又是服务器——-&gt;我们的所接收到的数据并不是来自于主干ISP的数据库，而是周围。</p>
+<p><img src="E:\计算机网络\3.png" alt="3"></p>
+<ul>
+<li><p><strong>互联网的核心</strong>：要向网络边缘的大量主机（为用户提供信息）提供连通性，使得任何一台主机都可以和其他主机通信。路由器起着特殊作用，实现分组交换。路由器与网络的核心部分采用高速链路相连接，而网络边缘则采用低速链路与路由器连接。</p>
+</li>
+<li><p><strong>数据传送的三种交换</strong>：分组交换，电路交换，报文交换（图）</p>
+</li>
+<li><p><strong>电路交换</strong>：整个报文的比特流连续地从源点直达终点，好像在一个管道中传输。</p>
+</li>
+<li><p><strong>原理</strong>：用交换机连接许多电话，交换机采用电路交换的方式，许多彼此连接起来的交换机完成全网的交换任务–&gt;电信网；</p>
+</li>
+</ul>
+<p>建立连接（占用通信资源，一条专用的物理通道）———&gt;通话（一直占用通信资源）——–&gt;释放连接（归还通信资源）</p>
+<ul>
+<li><p><strong>报文交换</strong>：整个报文先传送到相邻结点，全部存储下来后查找转发表，转发到下一个结点</p>
+</li>
+<li><p><strong>分组交换</strong>：单个分组（只是报文的一部分）传送到相邻结点，存储下来后查找转发表，转发到下一个结点。</p>
+</li>
+<li><p><strong>原理</strong>：采用存储转发的技术，整块数据块（报文）——&gt;划分报文——&gt;等长的数据段——-&gt;加一些必要的控制信息（目的地，源地址）组成的首部（包头）——–&gt;分组（包）——&gt;存储下来后查找转发表(按照首部的目的地址，找到合适的接口转发)——-&gt;转发到下一个结点</p>
+</li>
+<li><p><strong>分组交换优点</strong>：高效（动态分配传输带宽，对电信链路逐段占用），灵活（为每一个分组选择最合适的转发路由），迅速（以分组作为传送单位，可以不建立连接就能向其他主机发送分组），可靠（可靠的网络协议，分布式多路由的分组交换网）</p>
+</li>
+<li><p><strong>分组交换缺点</strong>：有时延（分组在路由器存储转发时需要排队）</p>
+</li>
+</ul>
+<p><strong>互联网有名人物</strong>：张朝阳：搜狐网站（So hu）；  丁磊：网易公司(Netease)；  王志东：新浪网站(Sina.com)；  马化腾+张志东：腾讯公司  (Tencent)，2011年张小龙：微信(WeChat)； 李彦宏+徐 勇：百度网站(Baidu.com)；  马云：阿里巴巴网站(Alibaba.com)</p>
+<p><strong>计算机网络类别</strong>：</p>
+<ol>
+<li><strong>按作用范围分</strong>：广域网WAN（Wide Area NetWork）=远程网，可跨越不同的国家，城域网MAN(Metropolitan Area     NetWork)=街区，城镇，局域网LAN(Local Area NetWork)=校园网或企业网，多采用以太网技术（是一种技术规范，通信协议标准），个人区域网PAN(Personal Area NetWork)=无线区域个人网WPAN（Wireless PAN）</li>
+<li><strong>按网络的使用者进行分类</strong>：公用网（电信公司出资建造，按规定缴纳费用的人都可以使用此网络），专用网（为某部门满足特殊业务工作，军队，铁路，银行，电力）</li>
+<li><strong>用来将用户接入到互联网的网络</strong>：接入网（Access Network）=本地接入网=居民接入网（电话线拨号接入互联网——-&gt;带宽接入技术（光纤带宽））</li>
+</ol>
+<p><strong>性能</strong>：</p>
+<ol>
+<li><p><strong>速率</strong>：计算机发出的信号都是数字形式的，比特bit(binary digit)二进制数字，信息量的单位；速率：数据的传送速率=数据率=比特率</p>
+</li>
+<li><p><strong>带宽</strong>：1.信号具有的频带宽度（信号的带宽是指该信号所包含各种不同频率成分所占据的频率范围）2.网络中某传输通道传送数据的能力，最高数据率bit/s</p>
+</li>
+<li><p><strong>吞吐量</strong>：单位时间内通过某个网络的实际数据量</p>
+</li>
+<li><p><strong>时延</strong>：数据从网络一端传送到另一端需要的时间；发送时延+传播时延+处理时延+排队时延</p>
+</li>
+<li><p><strong>时延带宽积</strong>：传播时延（高）*带宽（底面积）——-&gt;链路的柱形管道</p>
+</li>
+<li><p><strong>往返时间RTT</strong>（Round-Trip     Time）：双向交互一次所需时间</p>
+</li>
+<li><p><strong>利用率</strong>：信道利用率，网络利用率</p>
+<p><img src="E:\计算机网络\6.png" alt="6"></p>
+</li>
+</ol>
+<p><img src="E:\计算机网络\7.png" alt="7"></p>
+<p><img src="E:\计算机网络\8.png" alt="8"></p>
+<p><strong>体系结构</strong>：OSI七层协议+TCP/IP四层协议——–&gt;五层协议，实际应用时其分层是模糊的</p>
+<p>协议是水平的（下面的协议对上面的实体是透明的），服务是垂直的</p>
+<p><strong>应用层</strong>：进程间特定的网络应用（DNS，HTTP协议，SMTP）——报文——&gt;</p>
+<p><strong>运输层</strong>：进程间通信（通用的数据传输服务），TCP（有连接的可靠数据传输），UDP（无连接的尽最大努力传输）——报文段/用户数据报——–&gt;</p>
+<p><strong>网络层</strong>：=网际层=IP层，分组交换，选择合适的路由——IP数据报（=数据报=分组）————&gt;</p>
+<p><strong>数据链路层</strong>：数据传输总在一段链路上，将IP数据组装成帧，检查错误并纠错—–帧———&gt;</p>
+<p><strong>物理层</strong>：传送数据的单位是比特（0，1）</p>
+<p><strong>0层</strong>：物理介质：双绞线，同轴电缆，光缆（光纤），无限传输</p>
+<p><img src="E:\计算机网络\4.png" alt="4"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/11/15/%E7%89%A9%E7%90%86%E5%B1%82/" class="archive-article-date">
-  	<time datetime="2020-11-15T09:04:28.953Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-15</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/" class="archive-article-date">
-  	<time datetime="2020-11-15T09:02:43.113Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-15</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/11/15/Jsp%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="archive-article-date">
-  	<time datetime="2020-11-15T09:01:57.733Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-15</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2020/11/15/%E7%89%A9%E7%90%86%E5%B1%82/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/11/15/Jsp%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/12/machineLearning-md/" class="archive-article-date">
-  	<time datetime="2020-10-12T05:20:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-12</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/12/machineLearning-md/">machineLearning.md</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/12/dataAnalysis-md-md/" class="archive-article-date">
-  	<time datetime="2020-10-12T05:10:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/12/dataAnalysis-md-md/">dataAnalysis_md.md</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/04/%E6%88%91%E7%9A%84JSP%E4%BD%9C%E4%B8%9A%E5%88%86%E4%BA%AB/" class="archive-article-date">
-  	<time datetime="2020-10-04T13:14:18.295Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-04</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/04/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-10-04T09:21:53.803Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-04</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/04/hello-world/" class="archive-article-date">
-  	<time datetime="2020-10-04T07:43:23.339Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/04/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -374,8 +417,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

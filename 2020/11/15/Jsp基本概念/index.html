@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2020 | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="1.基本概念：  JSP(Java Server     Page)动态网页制作技术 Tomcat:应用服务器，JSP容器，servlet容器 servlet是一种特殊的Java文件，用来响应和处理Java请求  2.Jsp的处理过程：  客户端通过浏览器向服务器发送请求 服务器根据接收到的客户请求来加载被请求的JSP文件 web服务器中的Jsp引擎会将被加载的JSP文件转化为Servlet Js">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2020/index.html">
+<meta property="og:url" content="http://example.com/2020/11/15/Jsp%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.基本概念：  JSP(Java Server     Page)动态网页制作技术 Tomcat:应用服务器，JSP容器，servlet容器 servlet是一种特殊的Java文件，用来响应和处理Java请求  2.Jsp的处理过程：  客户端通过浏览器向服务器发送请求 服务器根据接收到的客户请求来加载被请求的JSP文件 web服务器中的Jsp引擎会将被加载的JSP文件转化为Servlet Js">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-11-15T09:01:57.733Z">
+<meta property="article:modified_time" content="2020-11-15T08:55:20.000Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -150,208 +154,235 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Jsp基本概念" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>1.基本概念</strong>：</p>
+<ul>
+<li>JSP(Java Server     Page)动态网页制作技术</li>
+<li>Tomcat:应用服务器，JSP容器，servlet容器</li>
+<li>servlet是一种特殊的Java文件，用来响应和处理Java请求</li>
+</ul>
+<p><strong>2.Jsp的处理过程</strong>：</p>
+<ol>
+<li>客户端通过浏览器向服务器发送请求</li>
+<li>服务器根据接收到的客户请求来加载被请求的JSP文件</li>
+<li>web服务器中的Jsp引擎会将被加载的JSP文件转化为Servlet</li>
+<li>Jsp引擎会将Servlet代码编译成Class文件</li>
+<li>服务器执行Class文件</li>
+<li>服务器将执行结果发送给浏览器进行显示</li>
+</ol>
+<p><strong>3.JDK，JRE，JVM，📂名称意义</strong></p>
+<ul>
+<li><p>JDK(Java     development kit)Java开发工具包—-(bin+lib类库)</p>
+</li>
+<li><p>JRE(Java Running     Environment)Java运行环境，JVM标准和Java核心类库</p>
+</li>
+<li><p>JVM(Java Virtual     Machine)Java虚拟机，源程序通过Java编译器编译成与平台无关的字节码文件.class文件，在Java解释器上执行，实现跨平台，一次编译，处处运行。</p>
+</li>
+<li><p>📂JSP中.me_tcat():tomcat服务器下的文件</p>
+</li>
+<li><p>conf:配置文间(.xml)</p>
+</li>
+<li><p>logs:日志文件</p>
+</li>
+<li><p>temp:临时文件</p>
+</li>
+<li><p>webapps:部署文件（项目部署）.jsp文件</p>
+</li>
+<li><p>work:在服务器运行时生成的文件.class文件</p>
+</li>
+</ul>
+<p><strong>4.Jsp基本构成元素：</strong></p>
+<ul>
+<li>Jsp指令标识：被服务器解释并执行</li>
+<li>HTML标记语句：标签语句</li>
+<li>嵌入的Java代码片段：&lt;%Java代码%&gt;</li>
+<li>Jsp表达式&lt;%=x%&gt;代替out.print()向页面显示内容给用户</li>
+</ul>
+<p><strong>5.Jsp指令：</strong></p>
+<ul>
+<li>Page指令：页面指令，&lt;%@page attribute1=”values1” attribute2=”values2”……%&gt;</li>
+</ul>
+<p>有(language,contentType,import,session,buffer,autoFlush,isTreadSafe,errorPage,isErrorPage,pageEncoding)属性</p>
+<ul>
+<li>include指令：可嵌入其他文件 &lt;%@include file=”filename or path”%&gt;</li>
+</ul>
+<p>​     将多个文件杂糅在一个页面，形成一个总的servlet文件，会有代码冗余，但是执行效率较高。</p>
+<p>​    一旦被包含文件修改，主文件也要修改，静态包含。</p>
+<p><strong>6.Jsp动作：</strong>替换一堆Java代码，按顺序临时跳转执行</p>
+<ul>
+<li>&lt;jsp:include     page=”filename or path”&gt;临时跳转执行被包含进来的文件，形成多个servlet文件，执行效率较低。</li>
+</ul>
+<p>但被包含文件的改变并不会影响到主文件，动态包含</p>
+<ul>
+<li>&lt;jsp:forward     page=”filename or path”&gt;跳转页面，请求转发到另一个页面</li>
+</ul>
+<p><strong>7.Jsp脚本标识</strong>（Jsp表达式，声明标识，脚本程序）</p>
+<ul>
+<li>Jsp表达式&lt;%=x%&gt;代替out.print()向页面显示内容给用户</li>
+<li>声明标识：&lt;%!x%&gt;x是全局变量，声明在servlet代码最上面，作为全局变量，每加载一次就会累加</li>
+<li>脚本程序：嵌入的Java代码片段：&lt;%Java代码%&gt;</li>
+</ul>
+<p><strong>8.Jsp注释</strong>：</p>
+<ul>
+<li>网页注释：HTML 注释<!--      -->会写入servlet中，但浏览器中会实现注释效果（注释内容不可见）</li>
+<li>隐藏注释：&lt;%–  –%&gt;，注释内容不会写入servlet中，JSP语句注释。</li>
+<li>脚本程序注释（Java代码注释）：//，/* */，/**       */文本注释</li>
+</ul>
+<p><strong>9.Jsp内置对象</strong>：(request,response)</p>
+<ul>
+<li>request对象：主要用来处理客户端，浏览器请求的各项参数和选项</li>
+</ul>
+<p>方法：getParameter(),getParameterValues()获取一个或多个参数值。</p>
+<p>​         getAttribute(),setAttribute()服务器内部资源的交流</p>
+<p>​         getCookies():保存用户相关信息</p>
+<ul>
+<li>response对象：响应客户端请求，向客户端输出信息</li>
+</ul>
+<p>方法：sendError(int number):使用指定状态码向用户发送错误响应</p>
+<p>​     sendError(int number，String msg):使用指定状态码和描述信息向用户发送错误响应</p>
+<p>​     sendRedirect(String location): 使用指定的重定向位置URL向客户发送重定向响应</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/11/15/%E7%89%A9%E7%90%86%E5%B1%82/" class="archive-article-date">
-  	<time datetime="2020-11-15T09:04:28.953Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-15</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/11/15/Jsp%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/" class="archive-article-date">
-  	<time datetime="2020-11-15T09:02:43.113Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-15</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/11/15/Jsp%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="archive-article-date">
-  	<time datetime="2020-11-15T09:01:57.733Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-15</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2020/11/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/10/12/machineLearning-md/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">machineLearning.md</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/12/machineLearning-md/" class="archive-article-date">
-  	<time datetime="2020-10-12T05:20:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-12</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/12/machineLearning-md/">machineLearning.md</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/12/dataAnalysis-md-md/" class="archive-article-date">
-  	<time datetime="2020-10-12T05:10:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/12/dataAnalysis-md-md/">dataAnalysis_md.md</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/04/%E6%88%91%E7%9A%84JSP%E4%BD%9C%E4%B8%9A%E5%88%86%E4%BA%AB/" class="archive-article-date">
-  	<time datetime="2020-10-04T13:14:18.295Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-04</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/04/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-10-04T09:21:53.803Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-04</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/04/hello-world/" class="archive-article-date">
-  	<time datetime="2020-10-04T07:43:23.339Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/04/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -374,8 +405,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
